@@ -39,7 +39,7 @@ let notes = [
 ]*/
 
 app.get('/', (request, response) => {
-    response.send(__dirname + 'build/index.html')
+    response.send('<h1>Hello World!</h1>')
 })
 
 app.get('/api/notes', (request, response) => {
