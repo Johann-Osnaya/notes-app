@@ -3,7 +3,7 @@
       {"source": "/", "destination": "/"}
     ],
     "builds": [
-        { "src": "*.html", "use": "@vercel/static" },
+        { "src": "/build/index.html", "use": "@vercel/static" },
         { "src": "*.js", "use": "@vercel/node" }
       ]
   }
