@@ -3,6 +3,7 @@
       {"source": "/api/(.*)", "destination": "index.js"}
     ],
     "builds": [
+        { "src": "/index.html", "use": "@vercel/static" },
         { "src": "*.js", "use": "@vercel/node" }
       ]
   }
