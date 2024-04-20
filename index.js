@@ -43,7 +43,7 @@ let notes = [
 
 app.get('/', (request, response) => {
     console.log(fileList);
-    response.sendFile('index.html')
+    response.sendFile('/index.html')
 })
 
 app.get('/api/notes', (request, response) => {
