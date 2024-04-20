@@ -4,7 +4,6 @@
       {"source": "/(.*)", "destination": "/api/notes"}
     ],
     "builds": [
-        { "src": "*.html", "use": "@vercel/static" },
         { "src": "*.js", "use": "@vercel/node" }
       ]
   }
