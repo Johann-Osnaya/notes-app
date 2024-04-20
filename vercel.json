@@ -10,7 +10,11 @@
   {
   "src": "/api/notes",
   "dest": "/index.js"
-  }
+  }, 
+  {
+    "src": "/",
+    "dest": "/index.html"
+    }
   ]
   }
   
