@@ -39,8 +39,7 @@ let notes = [
 ]*/
 
 app.get('/', (request, response) => {
-    console.log(process.cwd())
-    response.sendFile('/build/index.html')
+    response.sendFile('var/task/build/index.html')
 })
 
 app.get('/api/notes', (request, response) => {
