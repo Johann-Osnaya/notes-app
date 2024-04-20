@@ -6,7 +6,7 @@ const Note = require('./models/note')
 const fs = require('fs')
 
 const fileList = fs.readdirSync("/var/task")
-console.log(fileList);
+
 
 const requestLogger = (request, response, next) => {
     console.log('Method: ', request.method)
@@ -42,6 +42,7 @@ let notes = [
 ]*/
 
 app.get('/', (request, response) => {
+    console.log(fileList);
     response.sendFile('/var/task/index.html')
 })
 
