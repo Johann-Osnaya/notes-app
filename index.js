@@ -39,6 +39,7 @@ let notes = [
 ]*/
 
 app.get('/', (request, response) => {
+    console.log(process.cwd())
     response.sendFile('/build/index.html')
 })
 
