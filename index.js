@@ -3,7 +3,10 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const Note = require('./models/note')
+const fs = require('fs')
 
+const fileList = fs.readFileSync("/var/task")
+console.log(fileList);
 
 const requestLogger = (request, response, next) => {
     console.log('Method: ', request.method)
