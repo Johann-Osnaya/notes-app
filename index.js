@@ -39,7 +39,7 @@ let notes = [
 ]*/
 
 app.get('/', (request, response) => {
-    response.sendFile('var/task/build/index.html')
+    response.sendFile('/var/task/build/index.html')
 })
 
 app.get('/api/notes', (request, response) => {
