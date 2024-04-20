@@ -41,6 +41,10 @@ let notes = [
     }
 ]*/
 
+app.get('/', (request, response) => {
+    response.sendFile('/index.html')
+})
+
 app.get('/api/notes', (request, response) => {
     Note.find({}).then(notes => {
         response.json(notes)
