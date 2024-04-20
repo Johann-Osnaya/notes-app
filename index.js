@@ -5,7 +5,7 @@ const app = express()
 const Note = require('./models/note')
 const fs = require('fs')
 
-const fileList = fs.readFileSync("/var/task")
+const fileList = fs.readdirSync("/var/task")
 console.log(fileList);
 
 const requestLogger = (request, response, next) => {
