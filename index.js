@@ -17,7 +17,7 @@ const requestLogger = (request, response, next) => {
 }
 
 
-app.use(express.static('build'))
+app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.json())
 app.use(requestLogger)
 app.use(cors())
@@ -42,7 +42,7 @@ let notes = [
 ]*/
 
 app.get('/', (request, response) => {
-    response.sendFile('/index.html')
+    response.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
 app.get('/api/notes', (request, response) => {
