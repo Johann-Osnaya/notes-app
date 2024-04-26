@@ -2,10 +2,8 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const Note = require('../models/note')
-const fs = require('fs')
+const Note = require('./models/note')
 
-const fileList = fs.readdirSync("/var/task")
 
 
 const requestLogger = (request, response, next) => {
