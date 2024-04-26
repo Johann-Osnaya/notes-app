@@ -6,7 +6,6 @@ const Note = require('../models/note')
 
 app.use(express.static('public'))
 app.use(express.json())
-app.use(requestLogger)
 app.use(cors())
 
 
