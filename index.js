@@ -40,7 +40,6 @@ let notes = [
 ]*/
 
 app.get('/', (request, response) => {
-    console.log(fileList);
     response.sendFile('/index.html')
 })
 
