@@ -112,6 +112,14 @@ app.put('/api/notes/:id', (request, response, next) => {
     .catch(error => next(error))
 })
 
+app.get('/api/cron', (request, response, next) => {
+    Note.deleteMany({})
+    .then(result => {
+        response.status(204).end()
+    })
+    .catch(error => next(error))
+})
+
 
 const unknownEndpoint = (request, response) => {
     response.status(404).send({ error: 'unknown endpoint' })
