@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const Note = require('./models/note')
+const Note = require('../models/note')
 const fs = require('fs')
 
 const fileList = fs.readdirSync("/var/task")
@@ -17,7 +17,7 @@ const requestLogger = (request, response, next) => {
 }
 
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static('/public'))
 app.use(express.json())
 app.use(requestLogger)
 app.use(cors())
@@ -42,7 +42,8 @@ let notes = [
 ]*/
 
 app.get('/', (request, response) => {
-    response.sendFile(path.join(__dirname, 'public', 'index.html'))
+    console.log(fileList);
+    response.sendFile('/index.html')
 })
 
 app.get('/api/notes', (request, response) => {
