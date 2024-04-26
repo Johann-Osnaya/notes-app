@@ -1,12 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/(.*)",
+      "source": "/public/index.hmtl",
       "destination": "/index.js"
-    }
-  ]
+    },
 }
