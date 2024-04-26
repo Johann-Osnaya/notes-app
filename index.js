@@ -17,7 +17,7 @@ const requestLogger = (request, response, next) => {
 }
 
 
-app.use(express.static('/public'))
+app.use(express.static('public'))
 app.use(express.json())
 app.use(requestLogger)
 app.use(cors())
